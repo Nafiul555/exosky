@@ -1,0 +1,89 @@
+/* Ensure the body takes up the entire viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Make the Three.js canvas fill the entire screen */
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0; /* Ensure canvas is behind other elements */
+}
+
+/* Style and position the star info div on top of the canvas */
+#star-info {
+    position: absolute;
+    top: 20px;        /* Adjust the position */
+    left: 20px;
+    color: white;
+    background: rgba(87, 80, 80, 0.3);
+    padding: 5px;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    z-index: 10;      /* Ensure the star info is on top of the canvas */
+    display: block;   /* Make sure it's visible */
+}
+
+/* Style the toggle rotation button */
+#toggleRotationBtn {
+    position: absolute;
+    bottom: 20px;     /* Position the button at the bottom */
+    left: 20px;
+    background-color: #303238; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 10;      /* Ensure the button is on top of the canvas */
+    transition: background-color 0.3s ease;
+}
+
+#toggleRotationBtn:hover{
+    background-color: white;
+    color:#303238
+}
+
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Background color while loading */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Ensure it's on top of everything */
+}
+
+/* You can add any animation here */
+.loader {
+    border: 12px solid #f3f3f3; /* Light grey */
+    border-top: 12px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
