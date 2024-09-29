@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Event listener for submitting the constellation name
             submitConstellationBtn.addEventListener('click', function () {
                 const constellationName = constellationInput.value;
-                if (constellationName.trim() !== '' && clickedstars.length > 1) {
+                
                     // Calculate the midpoint of all clicked star positions
                     let midpoint = new THREE.Vector3(0, 0, 0);
                     clickPositions.forEach(pos => midpoint.add(pos));
@@ -546,21 +546,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     toggleRotationBtn.style.display = 'block';
                     toggleRotationBtn.textContent = 'Draw Constellation';
                     isRotation = !isRotation;
-                } else if (constellationName.trim() !== '' && clickedstars.length <= 1) {
-                    constellationInput.value = '';
-                    constellationForm.style.display = 'none';
-            
-                    // Reset for the next constellation
-                    clickPositions = [];
-                    clickPosition = [];
-                    clickedstars = [];
-            
-                    // Reset the rotation toggle button to "Draw Constellation"
-                    toggleRotationBtn.style.display = 'block';
-                    toggleRotationBtn.textContent = 'Draw Constellation';
-                    isRotation = !isRotation;
-                    
-                } 
+                
             });             
         }
     });
