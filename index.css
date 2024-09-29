@@ -38,6 +38,135 @@ canvas {
     background-color: white;
     color:#303238
 }
+#delete {
+    position: absolute;
+    top: 50px;        /* Adjust the position so it doesn't overlap with other elements */
+    left: 50px;
+    color: white;
+    background: rgba(87, 80, 80, 0.7);  /* Increase the opacity for better visibility */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    z-index: 20000;      /* Increase the z-index to ensure it's above the canvas */
+    display: none;    /* Initially hidden */
+}
+
+#zoom-in {
+    position: absolute;
+    top: 20px;     /* Position the button at the bottom */
+    right: 20px;
+    background: rgba(48, 50, 56, 0.3);/* Green */
+    border: none;
+    color: white;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 10;      /* Ensure the button is on top of the canvas */
+    transition: background-color 0.3s ease;
+}
+#zoom-in:hover {
+    background-color: white;
+    color:#303238
+}
+
+#zoom-out {
+    position: absolute;
+    top: 80px;     /* Position the button at the bottom */
+    right: 20px;
+    background: rgba(48, 50, 56, 0.3);/* Green */
+    border: none;
+    color: white;
+    width: 40px;
+    height: 30px;
+    
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 10;      /* Ensure the button is on top of the canvas */
+    transition: background-color 0.3s ease;
+}
+#zoom-out:hover {
+    background-color: white;
+    color:#303238
+}
+#selection-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(48, 50, 56, 0.3);
+    border: none;
+    color: white;
+    padding: 10;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+#selection-box {
+    position: absolute;
+
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    
+    border: 2px dashed #ffffff;
+    background-color: rgba(31, 44, 84, 0.2);
+    pointer-events: none;
+    z-index: 10;
+    display: none;
+}
+#selection-button:hover {
+    background-color: white;
+    color:#303238
+}
+
+#constellation-form {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius:5px;
+    z-index: 1000;
+    color: white;
+}
+
+
+#show-constellation {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: rgba(48, 50, 56, 0.3);
+    border: none;
+    color: white;
+    padding: 10;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+.label {
+    background-color: rgba(0, 0, 0, 0.0); /* Optional background for visibility */
+    padding: 5px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
 
 
 
